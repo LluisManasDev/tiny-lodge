@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: right 0.3s;
+    padding-top: 60px;
+    text-align: left;
+  }
+  
+  .navbar.open {
+    right: 0;
+  }
+  
+  .navbar a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  

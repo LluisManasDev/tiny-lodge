@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import Navbar from "./Navbar";
 import "./MainPage.css";
 
 function MainPage({ onSearch }) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [navOpen, setNavOpen] = useState(false);
 
   const handleSearchClick = () => {
     onSearch(startDate, endDate);
@@ -11,6 +14,10 @@ function MainPage({ onSearch }) {
 
   return (
     <div className="main-page">
+      <Navbar isOpen={navOpen} />
+      <div className="burger-icon" onClick={() => setNavOpen(!navOpen)}>
+        <FaBars />
+      </div>
       <div className="input-container">
         <input
           type="date"

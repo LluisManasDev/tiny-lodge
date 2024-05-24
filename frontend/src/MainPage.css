@@ -1,10 +1,12 @@
 .main-page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: url('../public/images/background_forest_with_cabin.jpg') no-repeat center center fixed;
   background-size: cover;
+  position: relative;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -46,6 +48,15 @@
 
 .input-container button:hover {
   background-color: #0056b3;
+}
+
+.burger-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
 }
 
 @media (max-width: 600px) {
